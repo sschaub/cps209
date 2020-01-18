@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 
 public class CalculatorTest {
     @Test
-    public void testAdd_positiveNums_positiveResult() {
+    public void testAdd_PositiveNums_PositiveResult() {
         var calc = new Calculator();
         calc.add(5);
         assertEquals(5, calc.getCurrent());

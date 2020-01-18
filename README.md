@@ -10,3 +10,7 @@ For example, type the following in Windows command prompt to download the cps209
 git clone https://github.com/sschaub/cps209 %USERPROFILE%\Desktop\cps209-examples
 ```
 
+On Linux:
+```
+git clone https://github.com/sschaub/cps209 ~\Desktop\cps209-examples
+```

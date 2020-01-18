@@ -7,15 +7,15 @@ Find the source code in src/main/java/App.java.
 
 To build this project, execute:
 ```
-build
+appbuild
 ```
 
 To run this project, execute:
 ```
-runapp
+apprun
 ```
 
 To clean this project, execute:
 ```
-clean
+appclean
 ```
