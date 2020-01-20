@@ -1,0 +1,3 @@
+@echo Downloading latest examples...
+git pull
+@pause

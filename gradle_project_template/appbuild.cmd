@@ -1,1 +1,1 @@
-gradlew clean install
+gradle clean install
