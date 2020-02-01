@@ -22,6 +22,8 @@ public class BinSettings {
     }
 
     public static void readValues() throws IOException {
+        System.out.println("Reading values using readValues()");
+
         int secondsToSelfDestruct;
         String color;
         boolean totalDestruction;
@@ -40,28 +42,30 @@ public class BinSettings {
     }
 
     public static void readValuesAlt() throws IOException {
+        System.out.println("Reading values using readValuesAlt()");
+
         int secondsToSelfDestruct;
         String color;
         boolean totalDestruction;
 
         if (Files.exists(Paths.get(fileName))) {
             try (var reader = new FileInputStream(fileName)) {
-                // secondsToSelfDestruct = reader.ReadInt32();
+
+                // Read 4-byte integer
                 byte[] data = new byte[4];
                 reader.read(data);
                 secondsToSelfDestruct = java.nio.ByteBuffer.wrap(data).order(java.nio.ByteOrder.BIG_ENDIAN).getInt();
                 // secondsToSelfDestruct = ((data[0] && 0xff) << 24) + (data[1] << 16) + (data[2] << 8) + data[3];
 
                 // Read string
+                // First, read 2-byte length:
                 byte[] lenData = new byte[2];
                 reader.read(lenData);
                 int len = java.nio.ByteBuffer.wrap(lenData).order(java.nio.ByteOrder.BIG_ENDIAN).getShort();
+                // Next, read characters of string:
                 byte[] colorData = new byte[len];
                 reader.read(colorData);
-                color = "";
-                for (byte b : colorData) {
-                    color += (char) b;
-                }
+                color = new String(colorData);
 
                 // Read boolean
                 int destruction = reader.read();

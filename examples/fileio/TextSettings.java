@@ -3,12 +3,17 @@ import java.io.*;
 public class TextSettings {
     static final String SETTINGS_FILENAME = "AppSettings.txt";
 
-    public static void main(String[] args) throws IOException {
-        WriteSettings();
-        ReadSettings();
+    public static void main(String[] args)  {
+        try {
+            WriteSettings();
+            ReadSettings();
+        } catch (IOException e) {
+            System.out.println("Oops! Something bad happened: " + e);
+            
+        }
     }
 
-    static void WriteSettings() throws IOException {
+    static void WriteSettings() throws IOException  {
         int secondsToSelfDestruct = 567;
         String color = "Blue";
         boolean totalDestruction = false;
