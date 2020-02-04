@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="MainWindow" xmlns:fx="http://javafx.com/fxml" stylesheets="MainWindow.css"
+    spacing="10" >
+
+    <Label fx:id="lblDisplay" text="0" styleClass="display" />
+
+    <HBox spacing="20">
+        <Button text="7" onAction="#onButtonClicked" styleClass="calcBtn" />
+        <Button text="8" onAction="#onButtonClicked" styleClass="calcBtn" />
+        <Button text="9" onAction="#onButtonClicked" styleClass="calcBtn" />
+    </HBox>
+
+    <HBox spacing="20">
+        <Button text="4" onAction="#onButtonClicked" styleClass="calcBtn" />
+        <Button text="5" onAction="#onButtonClicked" styleClass="calcBtn" />
+        <Button text="6" onAction="#onButtonClicked" styleClass="calcBtn" />
+    </HBox>
+
+    <HBox spacing="20">
+        <Button text="1" onAction="#onButtonClicked" styleClass="calcBtn" />
+        <Button text="2" onAction="#onButtonClicked" styleClass="calcBtn" />
+        <Button text="3" onAction="#onButtonClicked" styleClass="calcBtn" />
+    </HBox>
+
+    <HBox spacing="20">
+        <Button text="C" onAction="#onClearClicked" styleClass="calcBtn" />
+        <Button text="0" onAction="#onButtonClicked" styleClass="calcBtn" />
+        <Button text="+" onAction="#onPlusClicked" styleClass="calcBtn" />
+    </HBox>
+
+</VBox>

@@ -1,0 +1,4 @@
+.root {
+    -fx-padding: 10; /* Add a small padding around the window */
+    -fx-font-size: 14px;
+}

@@ -1,0 +1,17 @@
+.root {
+    -fx-padding: 10; /* Add a small padding around the window */
+}
+
+.calcBtn {
+    -fx-padding: 20;
+    -fx-font-size: 24px;
+}
+
+.display {
+    -fx-padding: 20;
+    -fx-font-size: 36px;
+    -fx-max-width: 1000000;
+    -fx-alignment: bottom-right;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
