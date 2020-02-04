@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="MainWindow" xmlns:fx="http://javafx.com/fxml" stylesheets="MainWindow.css"
+    spacing="10" prefHeight="400" prefWidth="250">
+
+    <Label text="What's your name?"/>
+    <TextField fx:id="txtName" />
+    <Button onAction="#onGreetClicked" text="Greet"  />
+    <Label fx:id="lblGreet" />
+</VBox>
