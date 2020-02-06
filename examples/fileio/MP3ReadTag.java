@@ -99,7 +99,13 @@ public class MP3ReadTag {
 
     // Converts an array of bytes to a String
     private static String bytesToString(byte[] data) {
-        return new String(data);
+        String result = "";
+        for (byte b : data) {
+            result += (char) b;
+        }
+        return result;
+        
+        // or just: return new String(data);
     }
 
 }
