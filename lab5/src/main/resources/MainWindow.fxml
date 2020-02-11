@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="MainWindow" xmlns:fx="http://javafx.com/fxml" stylesheets="MainWindow.css"
+    fx:id="vbox" >
+    <HBox>
+        <Button onAction="#onButtonClicked"  />
+        <Button onAction="#onButtonClicked"  />
+        <Button onAction="#onButtonClicked"  />
+    </HBox>
+
+    <HBox>
+        <Button onAction="#onButtonClicked"  />
+        <Button onAction="#onButtonClicked"  />
+        <Button onAction="#onButtonClicked"  />
+    </HBox>
+
+    <HBox>
+        <Button onAction="#onButtonClicked"  />
+        <Button onAction="#onButtonClicked"  />
+        <Button onAction="#onButtonClicked"  />
+    </HBox>
+
+    <Label fx:id="lblMessage" />
+
+</VBox>
