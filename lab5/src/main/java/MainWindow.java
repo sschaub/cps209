@@ -23,6 +23,8 @@ public class MainWindow {
 
     @FXML Label lblMessage;
 
+    // FXML Event Handlers
+
     @FXML 
     void initialize() {
         grid = new char[][] {
@@ -53,6 +55,8 @@ public class MainWindow {
 
     }
 
+    // Other methods
+
     void processMove(int row, int col) {
         if (winner != ' ')
             return;
@@ -67,4 +71,5 @@ public class MainWindow {
             winner = 'X';
         }
     }
+
 }
