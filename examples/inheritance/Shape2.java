@@ -1,4 +1,8 @@
-
+public class Shape2 {
+    public static void main(String[] args) {
+       Shape s = new Circle(3, 5, "fuschia", 5);
+    }
+}
 
 abstract class Shape { 
     protected int x, y; 
