@@ -1,0 +1,8 @@
+.root {
+    -fx-padding: 10; /* Add a small padding around the window */
+}
+
+.bigbutton {
+    -fx-font-size: 50; 
+    -fx-padding: 20;
+}
