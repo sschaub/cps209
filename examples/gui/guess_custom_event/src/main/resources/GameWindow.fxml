@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="GameWindow" alignment="CENTER" spacing="20">
+    <padding>
+        <Insets top="10" bottom="10" right="10" left="10"/>
+    </padding>
+
+    <Label fx:id="lblInstr" style="-fx-font-size: 20px"/>
+    <TextField fx:id="txtEntry" promptText="Enter your guess"/>
+    <Button fx:id="btnGuess" text="Guess" onAction="#onGuessClicked" style="-fx-font-size: 20px" minWidth="350"/>
+    <Label fx:id="lblResponse" style="-fx-font-size: 20px"/>
+
+    <Button fx:id="btnCheat" text="Cheat" onAction="#onCheatClicked"/>
+</VBox>
