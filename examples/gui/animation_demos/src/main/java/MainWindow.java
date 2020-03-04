@@ -32,14 +32,15 @@ public class MainWindow {
     @FXML
     void onBrokenStartClicked(ActionEvent event) {
         for (int i = 0; i < 20; ++i) {
-            updateImage();
+            imgView.setX(imgView.getX() + 4);
             try { Thread.sleep(200); } catch (Exception e) { }
         }
     }
 
     @FXML
     void onStartClicked() {
-        timeline = new Timeline(new KeyFrame(Duration.millis(50), e -> updateImage()));
+        timeline = new Timeline(new KeyFrame(Duration.millis(50), 
+        e -> imgView.setX(imgView.getX() + 4)));
         timeline.setCycleCount(50);
         timeline.play();
     }
@@ -49,7 +50,4 @@ public class MainWindow {
         timeline.stop();
     }
 
-    void updateImage() {
-        imgView.setX(imgView.getX() + 4);
-    }
 }
