@@ -3,10 +3,10 @@ package model;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class MinefieldTest {
+public class MinefieldGameTest {
 
-    Minefield makeGame() {
-        return new Minefield(new CellType[] {
+    MinefieldGame makeGame() {
+        return new MinefieldGame(new CellType[] {
             /* 0 */ CellType.Empty, 
             /* 1 */ CellType.Mine, 
             /* 2 */ CellType.Powerup,

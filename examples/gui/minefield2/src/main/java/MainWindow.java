@@ -7,11 +7,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.media.AudioClip;
 import model.CellType;
-import model.Minefield;
+import model.MinefieldGame;
 
 public class MainWindow {
 
-    private Minefield game;
+    private MinefieldGame game;
 
     private final int SIZE = 8;
 
@@ -32,7 +32,7 @@ public class MainWindow {
 
     @FXML
     void initialize() {
-        game = new Minefield(SIZE);
+        game = new MinefieldGame(SIZE);
         for (int i = 0; i < game.getSize(); ++i) {
             var btn = new Button();
             btn.setOnAction(e -> onCellClicked(e));

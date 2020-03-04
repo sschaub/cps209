@@ -7,3 +7,6 @@
 *.class
 build
 bin
+.idea
+gradle
+gradlew*

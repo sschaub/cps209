@@ -6,11 +6,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import model.CellType;
-import model.Minefield;
+import model.MinefieldGame;
 
 public class MainWindow {
 
-    private Minefield game;
+    private MinefieldGame game;
 
     @FXML
     HBox hbox;
@@ -23,7 +23,7 @@ public class MainWindow {
 
     @FXML
     void initialize() {
-        game = new Minefield(10);
+        game = new MinefieldGame(10);
     }
 
     @FXML
