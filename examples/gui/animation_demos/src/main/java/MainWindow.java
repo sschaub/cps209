@@ -20,8 +20,10 @@ public class MainWindow {
 
     @FXML
     void initialize() {
-        var clockTimeline = new Timeline(new KeyFrame(Duration.millis(1000), 
-            e -> lblTime.setText(new Date().toString())));
+        var keyFrame = new KeyFrame(Duration.millis(1000),
+            e -> lblTime.setText(new Date().toString()));
+        var clockTimeline = new Timeline(keyFrame);
+            
         clockTimeline.setCycleCount(Timeline.INDEFINITE);
         clockTimeline.play();
     }
@@ -38,7 +40,7 @@ public class MainWindow {
     @FXML
     void onStartClicked() {
         timeline = new Timeline(new KeyFrame(Duration.millis(50), e -> updateImage()));
-        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.setCycleCount(50);
         timeline.play();
     }
 
@@ -49,8 +51,5 @@ public class MainWindow {
 
     void updateImage() {
         imgView.setX(imgView.getX() + 4);
-        if (imgView.getX() > 200) {
-            timeline.stop();
-        }
     }
 }
