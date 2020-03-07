@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+application {
+    mainClassName = 'App'
+}
