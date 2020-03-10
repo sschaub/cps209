@@ -29,7 +29,7 @@ public class Critter {
 
     public void updatePosition() {
         x += speed * Math.cos(direction * Math.PI / 180);
-        y += speed * Math.cos(direction * Math.PI / 180);
+        y += speed * Math.sin(direction * Math.PI / 180);
     }
 
     @Override
