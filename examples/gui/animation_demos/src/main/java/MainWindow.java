@@ -32,7 +32,7 @@ public class MainWindow {
     @FXML
     void onBrokenStartClicked(ActionEvent event) {
         for (int i = 0; i < 20; ++i) {
-            imgView.setX(imgView.getX() + 4);
+            imgView.setLayoutX(imgView.getLayoutX() + 4);
             try { Thread.sleep(200); } catch (Exception e) { }
         }
     }
