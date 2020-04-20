@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="MainWindow" xmlns:fx="http://javafx.com/fxml" stylesheets="@MainWindow.css"
+    spacing="10" prefHeight="400" prefWidth="600">
+
+    <HBox spacing="10">
+        <Button onAction="#onCounterWithoutThreadsClicked" text="Count Without Threads"  />
+        <Button onAction="#onCounterClicked" text="Count With Threads"  />
+    </HBox>
+    <Label fx:id="lbl" />
+
+    <HBox spacing="10">
+        <Label text="Enter Filename:" />
+        <TextField fx:id="txtFilename" text="src/main/resources/MainWindow.fxml" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Find Word:" />
+        <TextField fx:id="txtWord" text="scene" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Search Without Threads" onAction="#onSearchWithoutThreadsClicked" />
+        <Button fx:id="btnSearchWithThreads" text="Search With Threads" onAction="#onSearchWithThreadsClicked" />
+    </HBox>
+
+    
+
+</VBox>

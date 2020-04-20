@@ -15,20 +15,24 @@ public class EchoServer {
             System.out.println("Waiting for client to connect...");
             try (Socket client = serverSocket.accept()) {
                 System.out.println("Received incoming connection from client: " + client.getInetAddress());
-                var reader = new Scanner(client.getInputStream());
-                var writer = new PrintWriter(client.getOutputStream(), true);
-
-                // Now, communicate with client
-                writer.println("Welcome to the Echo Server.");
-                while (reader.hasNext()) {
-                    String line = reader.nextLine();
-                    System.out.println("Received: " + line);
-                    writer.println(line);
-                }
+                handleClient(client);
 
             } catch (Exception e) {
                 System.out.println("Exception occurred: " + e.getMessage());
             }
         }
     }
+
+    private static void handleClient(Socket client) throws IOException {
+        var reader = new Scanner(client.getInputStream());
+        var writer = new PrintWriter(client.getOutputStream(), true);
+
+        // Now, communicate with client
+        writer.println("Welcome to the Echo Server.");
+        while (reader.hasNext()) {
+            String line = reader.nextLine();
+            System.out.println("Received: " + line);
+            writer.println(line);
+        }
+}
 }
