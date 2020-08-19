@@ -9,6 +9,9 @@ public class GUIApplication extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
+        Application.setUserAgentStylesheet(Application.STYLESHEET_MODENA);
+        com.sun.javafx.css.StyleManager.getInstance().addUserAgentStylesheet("MainWindow.css");
+        
         var loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
         var scene = new Scene(loader.load());
 
