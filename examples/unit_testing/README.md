@@ -1,21 +1,23 @@
 # README
 
-This folder contains an example of a class and a unit test. 
+This folder contains a template Gradle project. To use it, copy all of the folders
+and files to an empty folder you create. 
 
-To build this project and run the unit tests, execute:
+Find the source code in src/main/java/App.java.
+
+To compile this project, execute:
 ```
 gradle install
 ```
 
-To generate a report, execute:
+To run this project, execute:
 ```
-gradle clean install jacocoTestReport
+arun
 ```
-This produces two reports:
-* **build/reports/tests/test/index.html** displays unit test pass/fail info
-* **build/reports/jacoco/test/html/index.html** displays code coverage info
 
-Key files in this project include:
+To clean this project, execute:
+```
+aclean
+```
 
-* **src/main/java/Calculator.java** - class to be tested
-* **src/test/java/CalculatorTest.java** - unit test
+

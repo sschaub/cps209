@@ -5,9 +5,11 @@
 bin
 build
 
-# Ignore vscode stuff
+# Ignore some vscode stuff
 .project
 .classpath
 .settings
 .factorypath
-.vscode
+
+# Don't ignore .vscode folder
+!.vscode

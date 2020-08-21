@@ -1,6 +1,6 @@
 # README
 
-Place unit tests in this folder. Here's an example to get you started:
+Place additional classes and unit tests in this folder. Here's an example of a unit test to get you started:
 
 ```java
 import org.junit.Test;

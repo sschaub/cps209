@@ -8,8 +8,15 @@ repositories {
     jcenter()
 }
 
+sourceSets {
+    main.java.srcDirs = ['src']
+    main.resources.srcDirs = ['src']
+    test.java.srcDirs = ['src']
+    test.resources.srcDirs = ['src']
+}
+
 dependencies {
-    testImplementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
 }
 
 application {

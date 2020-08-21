@@ -5,17 +5,19 @@ and files to an empty folder you create.
 
 Find the source code in src/main/java/App.java.
 
-To build this project, execute:
+To compile this project, execute:
 ```
-appbuild
+gradle install
 ```
 
 To run this project, execute:
 ```
-apprun
+arun
 ```
 
 To clean this project, execute:
 ```
-appclean
+aclean
 ```
+
+
