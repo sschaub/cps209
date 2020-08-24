@@ -2,7 +2,13 @@
 
 This repository contains examples and other CpS 209 Course Resources.
 
-To copy this folder to your computer, open a command prompt and use **git clone** to clone the examples.
+## Downloading Files
+
+You can download these files to your computer by clicking the green Code button and choosing Download Zip.
+
+## Cloning with git
+
+You can use **git clone** to clone this repository so you can easily download updates.
 
 For example, type the following in Windows command prompt to download the cps209 folder to your desktop.
 ```
