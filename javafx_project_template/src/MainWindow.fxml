@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:controller="MainWindow" xmlns:fx="http://javafx.com/fxml"
+<VBox fx:controller="MainWindow" xmlns:fx="http://javafx.com/fxml"  stylesheets="@MainWindow.css"
     spacing="10" prefHeight="400" prefWidth="250">
 
     <Button onAction="#onGreetClicked" text="Greet"  />

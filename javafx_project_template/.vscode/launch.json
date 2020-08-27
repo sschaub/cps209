@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "App",
             "projectName": "app",
-            "args": "${command:SpecifyProgramArgs}"
+           //  "args": "${command:SpecifyProgramArgs}"
         }
     ]
 }

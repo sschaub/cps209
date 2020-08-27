@@ -9,10 +9,10 @@ repositories {
 }
 
 sourceSets {
-    main.java.srcDirs = ['src/java']
-    main.resources.srcDirs = ['src/resources']
-    test.java.srcDirs = ['src/java']
-    test.resources.srcDirs = ['src/resources']
+    main.java.srcDirs = ['src']
+    main.resources.srcDirs = ['src']
+    test.java.srcDirs = ['src']
+    test.resources.srcDirs = ['src']
 }
 
 javafx {
