@@ -166,3 +166,5 @@ function pdf_report_check {
   TestOutput "Must Pass" "PDF Report" $result "$(file $1)"
 
 }
+
+alias arun=build/install/app/bin/app
