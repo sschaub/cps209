@@ -91,7 +91,8 @@ function run_cmd {
 
     cmd=$*
     echo "Executing: $*"
-    timeout $timeout $cmd > __output.log 2>&1
+    #timeout $timeout $cmd > __output.log 2>&1
+    $cmd > __output.log 2>&1
     result=$?
 
     if [ $result -eq 0 ]; then
