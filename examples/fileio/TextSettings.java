@@ -25,7 +25,7 @@ public class TextSettings {
 
     }
 
-    static void ReadSettings() throws IOException {
+    static void ReadSettings()  {
         int secondsToSelfDestruct;
         String color;
         boolean totalDestruction;
