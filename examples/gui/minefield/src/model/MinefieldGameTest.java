@@ -25,7 +25,7 @@ public class MinefieldGameTest {
         assertTrue(!game.isValidMove(-1));
         assertTrue(!game.isValidMove(3));
 
-        game.move(2);
+        game.moveTo(2);
         assertEquals(2, game.getCurrentPosition());
 
         // Now, see if we can move to spots 3 or 4
@@ -39,9 +39,9 @@ public class MinefieldGameTest {
     public void testMove_HitsMine_DecrementsLives() {
         var game = makeGame();
 
-        game.move(1);
+        game.moveTo(1);
         assertEquals(2, game.getLives());
-        game.move(3);
+        game.moveTo(3);
         assertEquals(1, game.getLives());
     }
 
@@ -50,8 +50,8 @@ public class MinefieldGameTest {
         var game = makeGame();
 
         assertFalse(game.isGameOver());
-        game.move(2);
-        game.move(4);
+        game.moveTo(2);
+        game.moveTo(4);
         assertTrue(game.isGameOver());
     }
 

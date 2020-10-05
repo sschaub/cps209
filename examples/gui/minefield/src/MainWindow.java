@@ -32,13 +32,19 @@ public class MainWindow {
             return;
         var btn = (Button) event.getSource();
 
-        int position = buttonToPosition(btn);
-        if (game.isValidMove(position)) {
+        int jumpToPos = buttonToPosition(btn);
+        if (game.isValidMove(jumpToPos)) {
+            // Clear current button
             Button curPositionButton = positionToButton(game.getCurrentPosition());
             curPositionButton.setText("");
-            game.move(position);
-            curPositionButton = positionToButton(game.getCurrentPosition());
-            curPositionButton.setText(game.getCurrentCellType() == CellType.Mine ? "***" : ":)");
+
+            // Update current position
+            game.moveTo(jumpToPos);
+
+            // Display result of move
+            Button newPositionButton = positionToButton(game.getCurrentPosition());
+            newPositionButton.setText(game.getCurrentCellType() == CellType.Mine ? "***" : ":)");
+
             if (game.isGameOver()) {
                 if (game.getLives() > 0) {
                     lblMsg.setText("Game Over. You won!");

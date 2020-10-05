@@ -42,7 +42,7 @@ public class MinefieldGame {
     }
 
     // updates state of game for a move to <position>
-    public void move(int position) {
+    public void moveTo(int position) {
         if (isValidMove(position)) {
             currentPosition = position;
             if (field[position] == CellType.Mine) {
