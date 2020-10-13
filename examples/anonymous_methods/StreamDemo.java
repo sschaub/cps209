@@ -4,10 +4,7 @@ import java.util.stream.Collectors;
 class Program {
 
     static boolean isLarge(String s) {
-        if (s.length() > 3)
-            return true;
-        else
-            return false;
+        return s.length() > 3;
     }
 
     public static void main(String[] args) {
@@ -21,6 +18,8 @@ class Program {
             }
         }
 
+        result = items.stream().filter(s -> Program.isLarge(s)).findFirst().get();
+
         result = items.stream().filter(Program::isLarge).findFirst().get();
 
         result = items.stream().filter((String s) -> s.length() > 3).findFirst().get();
@@ -30,8 +29,9 @@ class Program {
         items.removeIf(s -> s == null || s.length() == 0);
 
         List<String> found = items.stream().filter(Program::isLarge).collect(Collectors.toList());
+
         System.out.println("\nItems for which isLarge() is true:");
-        found.stream().forEach(System.out::println);
+        found.stream().forEach( s -> System.out.println("*** " + s + " ***"));
 
         var students = new ArrayList<Student>(
                 Arrays.asList(new Student("Steve", 15), new Student("George", 18), new Student("Amy", 16)));
