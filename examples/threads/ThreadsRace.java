@@ -17,8 +17,9 @@ public class ThreadsRace {
 
     static void Sum(int start, int end)
     {
-        for (int i = start; i <= end; ++i)
+        for (int i = start; i <= end; ++i) {
             sum += i;
+        }
 
     }
 }

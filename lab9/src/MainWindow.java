@@ -43,7 +43,6 @@ public class MainWindow {
 
     @FXML
     void initialize() {        
-        lblSize.textProperty().addListener((o, oldVal, newVal) -> onTextChanged(newVal));
         slider.valueProperty().addListener((o, oldVal, newVal) -> onSliderChanged(newVal.intValue()));
 
         var keyFrame = new KeyFrame(Duration.millis(1000),
@@ -79,17 +78,6 @@ public class MainWindow {
     @FXML
     void onMouseMoved(MouseEvent event) {
         lblCoord.setText(String.format("(%d, %d)", (int) event.getX(), (int) event.getY()));
-    }
-
-    void onTextChanged(String newVal) {
-        try {
-            int val = Integer.parseInt(newVal);
-            if (val >= slider.getMin() && val <= slider.getMax()) {
-                slider.setValue(val);
-            }
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid value: " + newVal);
-        }
     }
 
     void onSliderChanged(int newVal) {
