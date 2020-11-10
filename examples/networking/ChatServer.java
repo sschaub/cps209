@@ -12,13 +12,14 @@ public class ChatServer {
 
     static Map<String, ClientInfo> clients = new HashMap<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         var serverSocket = new ServerSocket(PORT);
         System.out.println("ChatServer listening on port " + PORT + "...");
         while (true) {
             System.out.println("Waiting for client to connect...");
             final Socket client = serverSocket.accept();
             System.out.println("Received incoming connection from client: " + client.getInetAddress());
+            Thread.sleep(2000); // simulate delay
             var thread = new Thread(() -> handleClient(client));
             thread.start();
         }
@@ -44,6 +45,7 @@ public class ChatServer {
             while (!line.equals("quit") && reader.hasNext()) {
                 line = reader.nextLine();
                 System.out.println("Received from " + handle + ": " + line);
+                Thread.sleep(1000); // simulate delay
                 sendToAll(handle + ": " + line);
             }
 
