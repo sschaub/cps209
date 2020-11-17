@@ -1,6 +1,6 @@
 import java.util.concurrent.CompletableFuture;
 
-public class ThreadsSafeSum {
+public class Futures1 {
 
     public static void main(String[] args) throws Exception {
 
