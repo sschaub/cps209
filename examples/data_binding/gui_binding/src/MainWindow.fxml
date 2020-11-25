@@ -16,7 +16,7 @@
         snapToTicks="true" 
         value="1.0"  />
 
-    <Label fx:id="lblSliderValue"/>
+    <Label fx:id="lblSliderValue" text="${slider.value}" />
 
     <TextField fx:id="txtName" />
     <Label fx:id="lblLength" />

@@ -30,9 +30,9 @@ public class MainWindow {
     void initialize() {
         lblMessage.textProperty().bind(message);
         name.bindBidirectional(txtName.textProperty());
-        lblSliderValue.textProperty().bind(
-            Bindings.createStringBinding(() -> String.valueOf(slider.getValue()), slider.valueProperty())
-        );
+        // lblSliderValue.textProperty().bind(
+        //     Bindings.createStringBinding(() -> String.valueOf(slider.getValue()), slider.valueProperty())
+        // );
         lblLength.textProperty().bind(
              Bindings.createStringBinding(() -> String.valueOf(txtName.getText().length()), txtName.textProperty()));
     }
