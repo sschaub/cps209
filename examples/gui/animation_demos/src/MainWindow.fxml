@@ -19,7 +19,7 @@
     </HBox>
 
     <Pane prefWidth="100" prefHeight="100">
-        <ImageView fx:id="imgView"><image><Image url="@man-walking.gif"/></image></ImageView>
+        <ImageView fx:id="imgView"><image><Image url="@man-walking-static.gif"/></image></ImageView>
     </Pane>
 
 </VBox>
