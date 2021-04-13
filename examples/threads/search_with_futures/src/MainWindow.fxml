@@ -10,7 +10,7 @@
 
     <HBox spacing="10">
         <Label text="Enter Filename:" />
-        <TextField fx:id="txtFilename" text="src/main/resources/MainWindow.fxml" />
+        <TextField fx:id="txtFilename" text="src/MainWindow.fxml" />
     </HBox>
 
     <HBox spacing="10">

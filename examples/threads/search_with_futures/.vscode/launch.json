@@ -6,9 +6,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch) - Current File",
+            "name": "Launch with Arguments",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "App",
+            "projectName": "app",
+           //  "args": "${command:SpecifyProgramArgs}"
         }
     ]
 }
