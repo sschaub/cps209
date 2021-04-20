@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.concurrent.CancellationException;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 public class Searcher {
 
@@ -13,31 +15,37 @@ public class Searcher {
             int occurrences = 0;
             try (var rd = new BufferedReader(new FileReader(filename))) {
                 String line = rd.readLine();
-                int lines = 0;
                 while (line != null && !pleaseStop) {
                     int delay = 0;
 
                     while (delay < 1000) System.out.print(delay++);
-                    ++lines;
-                    if (lines % 10 == 0) {
-                        // ("Processed " + lines + "...");
-                    }
                     if (line.contains(word)) {
                         ++occurrences;                    
                     }
                     line = rd.readLine();
                 }
 
+                if (pleaseStop) {
+                    return -1;
+                }
+
                 return occurrences;
 
             } catch (IOException e) {
-                //( "Error: " + e.getMessage() );
-
+                throw new RuntimeException(e);
             }
 
-            return -1;
         });
     }
 
+    public boolean isPleaseStop() {
+        return pleaseStop;
+    }
+
+    public void setPleaseStop(boolean pleaseStop) {
+        this.pleaseStop = pleaseStop;
+    }
+
+    
     
 }
